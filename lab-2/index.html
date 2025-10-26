@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rick and Morty</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <span class="subTitle1">Мій застосунок дає змогу взаємодіяти з</span>
+        <h1>Rick and Morty API</h1>
+        <span class="subTitle2">(Варіант 12) - Сасник В.Д.</span>
+      </div>
+
+      <!-- Блок для всіх персонажів -->
+      <div class="allCharBox">
+        <h3>
+          1.В цьому блоці ви зможете отримати дані персонажів та обновляти
+          дані(завантажувати настпуну сторінку) за допомогою axios
+        </h3>
+        <div class="allCharBox__btnBox">
+          <button id="btnAxios" class="button getButton">
+            Отримати персонажів (Axios)
+          </button>
+          <button
+            id="btnUpdateAxios"
+            class="button putButton"
+            style="display: none"
+          >
+            Оновити персонажів (Axios)
+          </button>
+        </div>
+        <div id="loader" style="display: none">
+          <div class="spinner"></div>
+        </div>
+        <div id="characters" class="charactersBox"></div>
+      </div>
+
+      <div>
+        <h3>
+          2.В цьому блоці ви зможете отримати дані одного персонажа за його id з
+          fetch
+        </h3>
+        <div>
+          <div class="inputActionBox">
+            <label class="inputLabel" for="characterId"
+              >Введіть в поле id персонажа від 1 до 826</label
+            >
+            <div>
+              <input id="characterId" type="text" class="textInput" />
+              <button id="btnFetchCharById" class="button getButton">
+                Отримати дані персонажа
+              </button>
+            </div>
+          </div>
+
+          <div id="characterDetails">
+            <div id="getCharByIdLoader" style="display: none">
+              <div class="spinner"></div>
+            </div>
+            <div id="characterContent"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="result"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
