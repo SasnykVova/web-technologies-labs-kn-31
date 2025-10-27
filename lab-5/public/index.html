@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Express.js лабораторна 5</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Ласкаво просимо!</h1>
+
+      <ul class="linkList">
+        <li><a href="/time">Переглянути поточний час</a></li>
+        <li><a href="/time/json">Отримати час у JSON форматі</a></li>
+      </ul>
+
+      <h2>Встановити власний час</h2>
+      <form class="form" id="form" action="/settime" method="POST">
+        <div class="labelBox">
+          <label>Дата:</label>
+          <input type="date" name="date" required class="dateInput" />
+        </div>
+        <div class="labelBox">
+          <label>Час:</label>
+          <input type="time" name="time" required class="timeInput" />
+        </div>
+
+        <button id="submit" class="submit" type="submit">Надіслати</button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
